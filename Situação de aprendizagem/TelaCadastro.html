@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cadastro - Portal aluno SENAI</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- SWEET ALERT -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f2f2f2;
+}
+
+.container {
+    width: 900px;
+    margin: 80px auto;
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* LEFT */
+.left {
+    width: 40%;
+    background: #195da8;
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left img {
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+.left h2 {
+    margin-bottom: 10px;
+}
+
+.left p {
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+.left button {
+    margin-top: 20px;
+    padding: 12px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.left small {
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+/* RIGHT */
+.right {
+    width: 60%;
+    background: #fff;
+    padding: 40px;
+}
+
+.right h2 {
+    color: #1b2b4b;
+}
+
+.right p {
+    color: #195da8;
+    margin-bottom: 20px;
+}
+
+/* INPUT */
+.input-group {
+    background: #e5e5e5;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.input-group i {
+    color: #555;
+}
+
+.input-group input,
+.input-group select {
+    border: none;
+    background: transparent;
+    width: 100%;
+    outline: none;
+    margin-left: 10px;
+}
+
+/* LABEL */
+.label {
+    font-size: 13px;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* RADIO */
+.turno-group {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.opcao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.opcao input {
+    accent-color: #498fdb;
+}
+
+.opcao:hover {
+    border-color: #498fdb;
+    background: #f0f7ff;
+}
+.btn {
+    margin-top: 25px;
+    width: 100%;
+    background: #498fdb;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    color: white;
+}
+
+/* CHECKBOX */
+.checkbox-group {
+    margin-top: 15px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: #555;
+    cursor: pointer;
+}
+
+.checkbox input {
+    accent-color: #498fdb;
+}
+
+.checkbox a {
+    color: #498fdb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.checkbox a:hover {
+    text-decoration: underline;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="left">
+        <img src="https://www.se.senai.br/assets/img/cabecalho-3SENAI.png">
+        <h2>Bem-vindo</h2>
+        <p>Acesse sua conta para mais informações.</p>
+        <button>Entrar</button>
+        <small>Esqueci minha senha</small>
+    </div>
+
+    <div class="right">
+        <h2>Crie sua conta agora mesmo</h2>
+        <p>Preencha com suas informações</p>
+
+        <div class="input-group">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" id="nome" placeholder="Nome">
+        </div>
+
+        <div class="input-group">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" id="email" placeholder="Email">
+        </div>
+
+        <div class="input-group">
+            <i class="fa-solid fa-address-card"></i>
+            <input type="text" id="cpf" placeholder="CPF">
+        </div>
+
+        <div class="input-group">
+            <i class="fa-solid fa-phone"></i>
+            <input type="tel" id="telefone" placeholder="Telefone">
+        </div>
+
+        <div class="input-group">
+            <i class="fa-solid fa-book"></i>
+            <select id="curso">
+                <option value="">Selecione um curso...</option>
+                <option>ADS</option>
+                <option>Ciência da Computação</option>
+                <option>Sistemas de Informação</option>
+                <option>Administração</option>
+                <option>Marketing</option>
+                <option>Enfermagem</option>
+                <option>Psicologia</option>
+                <option>Design Gráfico</option>
+            </select>
+        </div>
+
+        <label class="label">Turno</label>
+
+        <div class="turno-group">
+            <label class="opcao">
+                <input type="radio" name="turno" value="manha">
+                <i class="fa-solid fa-cloud-sun"></i> Manhã
+            </label>
+
+            <label class="opcao">
+                <input type="radio" name="turno" value="tarde">
+                <i class="fa-solid fa-sun"></i> Tarde
+            </label>
+
+            <label class="opcao">
+                <input type="radio" name="turno" value="noite">
+                <i class="fa-solid fa-moon"></i> Noite
+            </label>
+
+            <label class="opcao">
+                <input type="radio" name="turno" value="integral">
+                <i class="fa-solid fa-clock"></i> Integral
+            </label>
+        </div>
+
+        <div class="input-group">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="senha" placeholder="Senha">
+        </div>
+
+        <div class="checkbox-group">
+            <label class="checkbox">
+                <input type="checkbox" id="termos">
+                <span>
+                    Eu aceito os <a href="#">Termos de Uso</a> e <a href="#">Política de Privacidade</a>
+                </span>
+            </label>
+        </div>
+
+        <button class="btn" type="button" onclick="validarCadastro()">Cadastrar</button>
+    </div>
+
+</div>
+
+<script>
+
+document.getElementById('cpf').addEventListener('input', function(e){
+    let v = e.target.value.replace(/\D/g, '');
+    v = v.replace(/(\d{3})(\d)/, '$1.$2');
+    v = v.replace(/(\d{3})(\d)/, '$1.$2');
+    v = v.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+    e.target.value = v;
+});
+
+document.getElementById('telefone').addEventListener('input', function(e){
+    let v = e.target.value.replace(/\D/g, '');
+    v = v.replace(/^(\d{2})(\d)/g, '($1) $2');
+    v = v.replace(/(\d{5})(\d)/, '$1-$2');
+    e.target.value = v;
+});
+
+function validarCadastro() {
+
+    const nome = document.getElementById('nome').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const cpf = document.getElementById('cpf').value.trim();
+    const telefone = document.getElementById('telefone').value.trim();
+    const curso = document.getElementById('curso').value;
+    const senha = document.getElementById('senha').value;
+    const termos = document.getElementById('termos');
+    const turno = document.querySelector('input[name="turno"]:checked');
+
+    if (nome.length < 3) return Swal.fire('Erro', 'Digite seu nome completo.', 'error');
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) return Swal.fire('Erro', 'Digite um email válido.', 'error');
+
+    if (cpf.length < 14) return Swal.fire('Erro', 'Digite um CPF válido.', 'error');
+
+    if (telefone.length < 14) return Swal.fire('Erro', 'Digite um telefone válido.', 'error');
+
+    if (curso === "") return Swal.fire('Erro', 'Selecione um curso.', 'error');
+
+    if (!turno) return Swal.fire('Erro', 'Selecione um turno.', 'error');
+
+    if (senha.length < 6) return Swal.fire('Erro', 'Senha deve ter no mínimo 6 caracteres.', 'error');
+
+    if (!termos.checked) return Swal.fire('Erro', 'Você precisa aceitar os termos.', 'error');
+
+    Swal.fire({
+        icon: 'success',
+        title: 'Cadastro realizado!',
+        text: 'Dados cadastrados'
+    });
+}
+
+</script>
+
+</body>
+</html>

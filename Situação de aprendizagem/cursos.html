@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha seus Cursos</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .navbar{
+            background-color: #195da8;
+            padding: 15px;
+        }
+
+        .navbar h2{
+            color: white;
+            margin: 0;
+        }
+
+        .banner{
+            background-color: #195da8;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .cursos{
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .card{
+            transition: .3s;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,.1);
+        }
+
+        .card:hover{
+            transform: translateY(-5px);
+        }
+
+        .btn-inscrever{
+            background-color: #195da8;
+            color: white;
+            width: 100%;
+        }
+
+        .btn-inscrever:hover{
+            background-color: #144b86;
+            color: white;
+        }
+
+        footer{
+            background-color: #195da8;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+        /* Acessibilidade */
+
+        .acessibilidade{
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            z-index: 9999;
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn-acessibilidade{
+            width: 45px;
+            height: 45px;
+            border: none;
+            border-radius: 50%;
+            background: white;
+            color: #195da8;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,.2);
+        }
+
+        .btn-tema{
+            width: 45px;
+            height: 45px;
+            border: none;
+            border-radius: 50%;
+            background: #FFD54F;
+            cursor: pointer;
+        }
+
+        /* Alto contraste */
+
+        body.alto-contraste{
+            background: #000;
+            color: #fff;
+        }
+
+        body.alto-contraste .card{
+            background: #111;
+            color: white;
+        }
+
+        body.alto-contraste .banner,
+        body.alto-contraste footer,
+        body.alto-contraste .navbar{
+            background: #000 !important;
+        }
+
+        body.alto-contraste h1,
+        body.alto-contraste h2,
+        body.alto-contraste h3,
+        body.alto-contraste p,
+        body.alto-contraste label{
+            color: white !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="acessibilidade">
+
+    <button id="aumentar" class="btn-acessibilidade">
+        A+
+    </button>
+
+    <button id="diminuir" class="btn-acessibilidade">
+        A-
+    </button>
+
+    <button id="contraste" class="btn-tema">
+        ☀️
+    </button>
+
+</div>
+
+<nav class="navbar">
+    <h2>Portal do Aluno SENAI</h2>
+</nav>
+
+<section class="banner">
+    <h1>Escolha seus Cursos</h1>
+    <p>Selecione os cursos que deseja realizar.</p>
+</section>
+
+<section class="cursos">
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="card p-3">
+                <h3>Desenvolvimento Web</h3>
+                <p>HTML, CSS, JavaScript e criação de sites modernos.</p>
+
+                <div class="form-check">
+                    <input class="form-check-input curso" type="checkbox" value="Desenvolvimento Web">
+                    <label class="form-check-label">Selecionar curso</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-3">
+                <h3>Banco de Dados</h3>
+                <p>Modelagem, SQL e gerenciamento de informações.</p>
+
+                <div class="form-check">
+                    <input class="form-check-input curso" type="checkbox" value="Banco de Dados">
+                    <label class="form-check-label">Selecionar curso</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-3">
+                <h3>Python</h3>
+                <p>Programação, automação e desenvolvimento de sistemas.</p>
+
+                <div class="form-check">
+                    <input class="form-check-input curso" type="checkbox" value="Python">
+                    <label class="form-check-label">Selecionar curso</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-3">
+                <h3>Redes de Computadores</h3>
+                <p>Configuração, manutenção e segurança de redes.</p>
+
+                <div class="form-check">
+                    <input class="form-check-input curso" type="checkbox" value="Redes de Computadores">
+                    <label class="form-check-label">Selecionar curso</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-3">
+                <h3>Cibersegurança</h3>
+                <p>Proteção de sistemas e prevenção de ataques digitais.</p>
+
+                <div class="form-check">
+                    <input class="form-check-input curso" type="checkbox" value="Cibersegurança">
+                    <label class="form-check-label">Selecionar curso</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-3">
+                <h3>Inteligência Artificial</h3>
+                <p>Fundamentos de IA e aplicações práticas.</p>
+
+                <div class="form-check">
+                    <input class="form-check-input curso" type="checkbox" value="Inteligência Artificial">
+                    <label class="form-check-label">Selecionar curso</label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="text-center mt-5">
+        <button class="btn btn-inscrever btn-lg" onclick="matricular()">
+            Realizar Matrícula
+        </button>
+    </div>
+</section>
+
+<footer>
+    Portal do Aluno SENAI © 2026
+</footer>
+
+<script>
+function matricular(){
+
+    let cursos = [];
+
+    document.querySelectorAll('.curso:checked').forEach(item => {
+        cursos.push(item.value);
+    });
+
+    if(cursos.length === 0){
+        alert("Selecione pelo menos um curso.");
+        return;
+    }
+
+    alert(
+        "Matrícula realizada nos cursos:\n\n" +
+        cursos.join("\n")
+    );
+}
+</script>
+    <script>
+let tamanhoFonte = 16;
+
+// Aumentar fonte
+document.getElementById("aumentar").addEventListener("click", function(){
+
+    if(tamanhoFonte < 24){
+        tamanhoFonte += 2;
+        document.body.style.fontSize = tamanhoFonte + "px";
+    }
+
+});
+
+// Diminuir fonte
+document.getElementById("diminuir").addEventListener("click", function(){
+
+    if(tamanhoFonte > 12){
+        tamanhoFonte -= 2;
+        document.body.style.fontSize = tamanhoFonte + "px";
+    }
+
+});
+
+// Alto contraste
+document.getElementById("contraste").addEventListener("click", function(){
+
+    document.body.classList.toggle("alto-contraste");
+
+    if(document.body.classList.contains("alto-contraste")){
+        this.innerHTML = "🌙";
+    }else{
+        this.innerHTML = "☀️";
+    }
+
+});
+</script>
+</body>
+</html>
+

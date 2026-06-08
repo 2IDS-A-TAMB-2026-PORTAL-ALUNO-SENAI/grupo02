@@ -1,0 +1,150 @@
+/* Geral */
+body{
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Banner */
+.banner{
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.banner h1{
+    margin-bottom: 15px;
+}
+
+.banner p{
+    margin-bottom: 20px;
+}
+
+/* Cards */
+.card{
+    height: 100%;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Rodapé */
+footer{
+    background-color: #2957A4;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+/* ========================= */
+/* BOTÕES DE ACESSIBILIDADE */
+/* ========================= */
+
+.acessibilidade{
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 9999;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+/* A+ e A- */
+.btn-acessibilidade{
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: #fff;
+    color: #2957A4;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,.2);
+    transition: all .3s ease;
+}
+
+.btn-acessibilidade:hover{
+    background: #2957A4;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Botão Sol/Lua */
+.btn-tema{
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: #FFD54F;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,.2);
+    transition: all .4s ease;
+}
+
+.btn-tema:hover{
+    transform: rotate(180deg) scale(1.1);
+}
+
+.btn-tema.ativo{
+    background: #222;
+    color: white;
+}
+.btn-login{
+    background-color: #2957A4;
+}
+
+/* ========================= */
+/* ALTO CONTRASTE */
+/* ========================= */
+
+body.alto-contraste{
+    background-color: #000;
+    color: #fff;
+}
+
+body.alto-contraste .banner,
+body.alto-contraste .secao-container{
+    background-color: #111;
+}
+
+body.alto-contraste .card{
+    background-color: #111;
+    color: white;
+    border: 1px solid white;
+}
+
+body.alto-contraste footer{
+    background-color: #000;
+    color: white;
+}
+
+body.alto-contraste nav{
+    background-color: #000 !important;
+}
+
+body.alto-contraste h1,
+body.alto-contraste h2,
+body.alto-contraste h3,
+body.alto-contraste h4,
+body.alto-contraste h5,
+body.alto-contraste h6,
+body.alto-contraste p,
+body.alto-contraste a,
+body.alto-contraste span{
+    color: white !important;
+}
+
+/* Botões Bootstrap */
+body.alto-contraste .btn-primary{
+    background-color: #2957A4 !important;
+    border-color: #2957A4 !important;
+}
+
+body.alto-contraste .btn-danger{
+    background-color: #2957A4 !important;
+    border-color: #2957A4 !important;
+    color: white !important;
+}
