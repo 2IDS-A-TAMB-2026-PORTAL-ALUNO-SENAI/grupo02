@@ -1,22 +1,35 @@
 # 🎓 Portal do Aluno SENAI
 
-Projeto desenvolvido para simular um portal educacional do SENAI, permitindo que alunos visualizem cursos, obtenham informações institucionais e entrem em contato através de uma interface moderna e responsiva.
+## 📖 Sobre o Projeto
 
-## 📋 Funcionalidades
+O **Portal do Aluno SENAI** é uma aplicação web desenvolvida com o objetivo de simular um ambiente educacional moderno, intuitivo e responsivo. O sistema permite que os usuários consultem informações institucionais, visualizem cursos disponíveis e entrem em contato com a instituição de forma simples e eficiente.
 
-- Página inicial institucional
-- Listagem de cursos disponíveis
-- Página de contato
-- Layout responsivo
-- Interface desenvolvida com Bootstrap
-- Navegação simples e intuitiva
+Este projeto foi desenvolvido como atividade prática para aplicação dos conhecimentos adquiridos em desenvolvimento web front-end, utilizando tecnologias atuais e boas práticas de organização de código.
+
+---
+
+## ✨ Funcionalidades
+
+- 🏠 Página inicial institucional
+- 📚 Catálogo de cursos disponíveis
+- 📞 Página de contato
+- 📱 Interface totalmente responsiva
+- ♿ Recursos de acessibilidade
+- 🎨 Design moderno e intuitivo
+- 🧭 Navegação simples e eficiente
+
+---
 
 ## 🛠️ Tecnologias Utilizadas
 
-- HTML5
-- CSS3
-- JavaScript
-- Bootstrap 5
+As seguintes tecnologias foram utilizadas no desenvolvimento do projeto:
+
+- **HTML5** — Estruturação das páginas
+- **CSS3** — Estilização e personalização da interface
+- **JavaScript** — Interatividade e funcionalidades dinâmicas
+- **Bootstrap 5** — Responsividade e componentes visuais
+
+---
 
 ## 📁 Estrutura do Projeto
 
@@ -36,25 +49,45 @@ projeto/
 └── images/
 ```
 
+---
+
 ## 📱 Responsividade
 
-O sistema foi desenvolvido utilizando Bootstrap, garantindo compatibilidade com:
+O portal foi desenvolvido utilizando o framework Bootstrap, garantindo uma experiência de navegação adequada em diferentes dispositivos:
 
-- Desktop
-- Tablet
-- Smartphone
+- 💻 Desktop
+- 📱 Smartphones
+- 📟 Tablets
 
-## 🎯 Objetivo
+---
 
-Aplicar conceitos de desenvolvimento web front-end, incluindo criação de páginas responsivas, estilização com Bootstrap e organização de projetos.
+## 🎯 Objetivos do Projeto
 
-## 👨‍💻 Integrantes
+- Aplicar conceitos de desenvolvimento web front-end;
+- Desenvolver interfaces responsivas e acessíveis;
+- Utilizar frameworks modernos para otimização do desenvolvimento;
+- Praticar organização e estruturação de projetos web;
+- Proporcionar uma experiência de usuário agradável e intuitiva.
 
-Guilherme Staconi dos Santos
-Isabela Aparecida Uliana Tessarin
-Laura Ubaldo
-Ana Lara Ventura Galdino
+---
+
+## 👨‍💻 Equipe de Desenvolvimento
+
+Este projeto foi desenvolvido pelos alunos:
+
+- **Laura Ubaldo**
+- **Guilherme Staconi**
+- **Isabela Tessarin**
+- **Ana Lara Galdino**
+
+---
 
 ## 📄 Licença
 
-Projeto desenvolvido para fins educacionais.
+Este projeto possui caráter exclusivamente educacional e foi desenvolvido para fins de aprendizagem e prática acadêmica.
+
+---
+
+### 🏫 SENAI — Serviço Nacional de Aprendizagem Industrial
+
+Projeto acadêmico desenvolvido para demonstrar conhecimentos em desenvolvimento web utilizando HTML, CSS, JavaScript e Bootstrap.
